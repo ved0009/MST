@@ -1,366 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTS - Seamless Cloud Storage for Teams</title>
-    <link href="tooplate-cloud-sync-style.css" rel="stylesheet">
-    
-<!--
+    <link href="tooplate-cloud-sync-style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-Tooplate 2142 Cloud Sync
+    <style>
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
-https://www.tooplate.com/view/2142-cloud-sync
+      .stat-card {
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 12px;
+        padding: 25px 15px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-Free HTML CSS Template
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+      }
 
--->
-</head>
-<body>
+      .stat-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-secondary, #ccc);
+      }
+
+      @media (max-width: 600px) {
+        .stat-icon {
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- Animated Background -->
     <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
     </div>
 
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <div class="logo">MST</div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">services</a>
-                <a href="about.html">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#" class="cta-button">Start Free Trial</a>
-            </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="nav-container">
+        <div class="logo">MST</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="team.html">Our Team</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="news.html">News</a>
+          <a href="contactus.html" class="cta-button">Get Started</a>
         </div>
-        <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Home</a>
-                <a href="services.html">services</a>
-                <a href="about.html">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#" class="cta-button">Start Free Trial</a>
-        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactus.html">Contact</a>
+        <a href="news.html">News</a>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-backgrounds">
-            <div class="hero-bg"></div>
-            <div class="hero-bg"></div>
-            <div class="hero-bg"></div>
-        </div>
-        <div class="hero-content">
-            <h1>Cloud Storage That Scales With Your Team</h1>
-            <p class="hero-subtitle">Secure, fast, and intelligent file management for modern teams. Collaborate seamlessly across your organization.</p>
-            <a href="#" class="cta-button" style="font-size: 1.1rem; padding: 0.75rem 2rem;">Get Started Free</a>
-        </div>
+      <div class="hero-backgrounds">
+        <div class="hero-bg active"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+      </div>
+      <div class="hero-content">
+        <h1 id="hero-title">See Quick See Clear</h1>
+        <p id="hero-subtitle" class="hero-subtitle">
+          with MegaSat Technologies, Delivering Quality with Speed and
+          Precision.
+        </p>
+      </div>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <div class="features-container">
-            <div class="features-header">
-                <h2>Everything You Need to Succeed</h2>
-                <p class="features-subtitle">Powerful features designed to streamline your workflow and boost productivity</p>
+      <div class="features-container">
+        <div class="features-layout">
+          <!-- Two Column Features -->
+          <div class="features-two-col">
+            <div class="feature-card-large">
+              <div class="feature-icon">🛰️</div>
+              <h3>High Resolution Imagery</h3>
+              <p>
+                Best quality high-resolution imagery provided tailor-made to the
+                needs of Defence and Intelligence agencies, sourced through
+                credible and trusted partners.
+              </p>
+              <ul class="feature-checklist">
+                <li>60 cm resolution imagery</li>
+                <li>Tailor-made for Defence & Intelligence</li>
+                <li>Trusted partner sourcing</li>
+              </ul>
             </div>
-            
-            <div class="features-layout">
-                <!-- Two Column Features -->
-                <div class="features-two-col">
-                    <div class="feature-card-large">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Enterprise-Grade Security</h3>
-                        <p>Your data is protected with bank-level encryption, both in transit and at rest. We're compliant with SOC 2, GDPR, and HIPAA standards.</p>
-                        <ul class="feature-checklist">
-                            <li>256-bit AES encryption</li>
-                            <li>Two-factor authentication</li>
-                            <li>Regular security audits</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card-large">
-                        <div class="feature-icon">🤝</div>
-                        <h3>Real-time Collaboration</h3>
-                        <p>Work together seamlessly with your team. See changes as they happen with live editing, comments, and instant notifications.</p>
-                        <ul class="feature-checklist">
-                            <li>Live document editing</li>
-                            <li>Version control & rollback</li>
-                            <li>Team activity tracking</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Four Column Features -->
-                <div class="features-four-col">
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🚀</div>
-                        <h4>Lightning Fast</h4>
-                        <p>Upload and access files instantly with our global CDN network.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">📊</div>
-                        <h4>Advanced Analytics</h4>
-                        <p>Track usage patterns and optimize your workflow with detailed insights.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🔄</div>
-                        <h4>Smart Sync</h4>
-                        <p>Automatic syncing across all devices with conflict resolution.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🌐</div>
-                        <h4>API Integration</h4>
-                        <p>Connect with 1000+ apps through our powerful REST API.</p>
-                    </div>
-                </div>
+            <div class="feature-card-large">
+              <div class="feature-icon">📡</div>
+              <h3>RF Locating Services</h3>
+              <p>
+                Access to RF locating services for Tip and Cue to locate the
+                area of interest quickly and save precious imaging efforts.
+                Process initiated to design and develop efficient RF satellite
+                constellations using high-end technology, providing greater
+                value for the money spent.
+              </p>
+              <ul class="feature-checklist">
+                <li>Tip and Cue based RF locating</li>
+                <li>Efficient satellite constellation design</li>
+                <li>High-end technology integration</li>
+              </ul>
             </div>
+
+            <div class="feature-card-large">
+              <div class="feature-icon">💡</div>
+              <h3>Analytical Solutions</h3>
+              <p>
+                A smart analytical system capable of integrating inputs from
+                different sensors and generating actionable intelligence, with
+                change detection, to aid in quick and reliable decision making.
+              </p>
+              <ul class="feature-checklist">
+                <li>Multi-sensor data integration</li>
+                <li>Automated change detection</li>
+                <li>Actionable intelligence generation</li>
+              </ul>
+            </div>
+            <div class="feature-card-large">
+              <div class="feature-icon">🛰</div>
+              <h3>GeoSpatial Intelligence</h3>
+              <p>
+                Best-in-class geospatial analysis tools designed to process
+                satellite data, extract insights, and deliver real-time
+                situational awareness for mission-critical operations.
+              </p>
+              <ul class="feature-checklist">
+                <li>AI-driven object and pattern recognition</li>
+                <li>Real-time change and activity detection</li>
+                <li>Mission-specific intelligence dashboards</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing" id="pricing">
-        <div class="pricing-header">
-            <h2>Pricing That Grows With You</h2>
-            <p class="hero-subtitle">Calculate your perfect plan based on your team size and storage needs</p>
-        </div>
-
-        <div class="pricing-calculator">
-            <div class="slider-container">
-                <div class="slider-label">
-                    <span>Team Members</span>
-                    <span id="teamSize">10</span>
-                </div>
-                <input type="range" class="slider" id="teamSlider" min="1" max="100" value="10">
+      <div class="features-container">
+        <!-- About Section -->
+        <section class="aboutus-section">
+          <div class="aboutus-container">
+            <div class="aboutus-left">
+              <img
+                src="images/space satelight1.jpg"
+                alt="MegaSat Technologies"
+              />
             </div>
-            <div class="slider-container">
-                <div class="slider-label">
-                    <span>Storage (GB)</span>
-                    <span id="storageSize">500</span>
-                </div>
-                <input type="range" class="slider" id="storageSlider" min="100" max="5000" step="100" value="500">
+            <div class="aboutus-right">
+              <h2>MegaSat Technologies Pvt. Limited</h2>
+              <p>
+                MegaSat Technologies Pvt. Limited, an Indian-owned startup, is a
+                prominent contributor to India’s space industry, driven by a
+                commitment to self-reliance and innovation. Recognized by the
+                Department of Promotion of Industry and Internal Trade, it
+                aligns with India’s agenda of Atmanirbhar Bharat (self-reliant
+                India).
+              </p>
+              <p>
+                At the core of MegaSat’s mission is the development of a robust
+                ecosystem in India to foster indigenous capabilities in
+                geospatial and space-based intelligence, tailored to the
+                specific needs of India’s defense sector. Leveraging
+                state-of-the-art satellite technology, MegaSat aims to transform
+                the landscape of space-based solutions within the country.
+              </p>
+              <p>
+                The solutions offered by MegaSat Technologies comprise satellite
+                imagery services, data aggregator services, integrated ground
+                command stations, and advanced AI-based Geospatial intelligence
+                analytical systems. Committed to offering comprehensive
+                satellite solutions, MegaSat empowers defense agencies with
+                enhanced situational awareness and strategic decision-making
+                capabilities, contributing significantly to India’s strategic
+                autonomy and technological advancement.
+              </p>
             </div>
-        </div>
-
-        <div class="pricing-cards">
-            <div class="pricing-card">
-                <h3 class="plan-name">Starter</h3>
-                <div class="plan-price">$<span id="starterPrice">29</span><span>/month</span></div>
-                <ul class="plan-features">
-                    <li>Up to 10 team members</li>
-                    <li>100 GB storage</li>
-                    <li>Basic collaboration tools</li>
-                    <li>Email support</li>
-                </ul>
-                <a href="#" class="cta-button">Choose Starter</a>
-            </div>
-
-            <div class="pricing-card popular">
-                <h3 class="plan-name">Professional</h3>
-                <div class="plan-price">$<span id="proPrice">149</span><span>/month</span></div>
-                <ul class="plan-features">
-                    <li>Up to 50 team members</li>
-                    <li>1 TB storage</li>
-                    <li>Advanced collaboration</li>
-                    <li>Priority support</li>
-                    <li>API access</li>
-                </ul>
-                <a href="#" class="cta-button">Choose Professional</a>
-            </div>
-
-            <div class="pricing-card">
-                <h3 class="plan-name">Enterprise</h3>
-                <div class="plan-price">$<span id="enterprisePrice">299</span><span>/month</span></div>
-                <ul class="plan-features">
-                    <li>Unlimited team members</li>
-                    <li>Unlimited storage</li>
-                    <li>Custom integrations</li>
-                    <li>24/7 phone support</li>
-                    <li>Dedicated account manager</li>
-                </ul>
-                <a href="#" class="cta-button">Contact Sales</a>
-            </div>
-        </div>
+          </div>
+        </section>
+      </div>
     </section>
-
-    <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2>Trusted by 10,000+ Teams Worldwide</h2>
-                <p class="about-subtitle">Since 2020, we've been on a mission to revolutionize how teams collaborate and manage their digital assets.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime SLA</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">Countries Served</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">2M+</div>
-                        <div class="stat-label">Files Synced Daily</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Customer Support</div>
-                    </div>
-                </div>
+      <div class="about-container">
+        <div class="about-content">
+          <h2>High Quality at Fast Speed</h2>
 
-                <div class="about-text">
-                    <p>MTS was born from a simple frustration: existing cloud storage solutions were either too complex for small teams or too limited for growing businesses. We built MTS to be the perfect balance - powerful enough for enterprises, simple enough for startups.</p>
-                    <p>Our team of security experts, designers, and engineers work tirelessly to ensure your data is not just stored, but protected, organized, and always accessible when you need it most. MTS HTML Template is free to use for any purpose. You may download it from <a href="#">Tooplate</a> website. Images are from <a href="#">Unsplash</a> website.</p>
-                </div>
+          <div class="about-text">
+            <p>
+              Single Window Shopping of Hi resolution data generated from
+              multiple sources, Quick response, Reliable Delivery retaining
+              Confidentiality desired by the customer, Competitive Pricing,
+              Multiple Revisits in a day, Change Detection, Actionable
+              Intelligence delivered at door step
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">🖼️</div>
+              <div class="stat-label">Hi Resolution</div>
             </div>
+            <div class="stat-card">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-label">Quick response</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-label">Pricing</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🚀</div>
+              <div class="stat-label">Relible Delivery</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">👤</div>
+              <div class="stat-label">24/7 Support</div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h2>Get in Touch</h2>
-                <p class="contact-subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-            </div>
+    <section class="clients-section">
+      <div class="clients-container">
+        <div class="clients-marquee" id="clientsMarquee">
+          <div class="clients-track">
+            <img src="images/logo1.png" alt="Client 1" />
+            <img src="images/logo2.png" alt="Client 2" />
+            <img src="images/logo3.png" alt="Client 3" />
+            <img src="images/logo4.png" alt="Client 4" />
 
-            <div class="contact-content">
-                <div class="contact-form-wrapper">
-                    <div class="form-header">
-                        <h3>Send us a Message</h3>
-                        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
-                    </div>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" placeholder="john@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" placeholder="Your Company (Optional)">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">How can we help?</label>
-                            <select id="subject">
-                                <option value="">Select a Topic</option>
-                                <option value="sales">Sales Inquiry</option>
-                                <option value="support">Technical Support</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="demo">Request a Demo</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="9" placeholder="Tell us more about your needs..." required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <div class="quick-contact">
-                        <h3>Quick Contact</h3>
-                        <div class="contact-methods">
-                            <a href="mailto:support@MTS.com" class="contact-method">
-                                <span class="method-icon">📧</span>
-                                <div class="method-details">
-                                    <strong>Email Us</strong>
-                                    <span>support@MTS.com</span>
-                                </div>
-                            </a>
-                            <a href="#" class="contact-method">
-                                <span class="method-icon">💬</span>
-                                <div class="method-details">
-                                    <strong>Live Chat</strong>
-                                    <span>Available 9AM-6PM EST</span>
-                                </div>
-                            </a>
-                            <a href="tel:+15551234567" class="contact-method">
-                                <span class="method-icon">📱</span>
-                                <div class="method-details">
-                                    <strong>Call Us</strong>
-                                    <span>+1 (555) 123-4567</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="office-locations">
-                        <h3>Our Offices</h3>
-                        <div class="location-grid">
-                            <div class="location">
-                                <strong>🇺🇸 San Francisco</strong>
-                                <p>123 Market Street<br>Suite 400, CA 94105</p>
-                            </div>
-                            <div class="location">
-                                <strong>🇬🇧 London</strong>
-                                <p>45 Fleet Street<br>London EC4Y 1BJ</p>
-                            </div>
-                            <div class="location">
-                                <strong>🇸🇬 Singapore</strong>
-                                <p>1 Raffles Place<br>Tower 1, #40-02</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- duplicate for smooth looping -->
+            <img src="images/logo1.png" alt="Client 1" />
+            <img src="images/logo2.png" alt="Client 2" />
+            <img src="images/logo3.png" alt="Client 3" />
+            <img src="images/logo4.png" alt="Client 4" />
+          </div>
         </div>
+      </div>
     </section>
 
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>Gallery</h2>
+
+          <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+              <div class="slider-card">
+                <img
+                  src="images/space satelight1.jpg"
+                  alt="High Resolution"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight2.jpg"
+                  alt="Quick Response"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight3.jpg"
+                  alt="Pricing"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight4.jpg"
+                  alt="Reliable Delivery"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/vs_satelight.jpg"
+                  alt="24/7 Support"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight1.jpg"
+                  alt="High Resolution"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight2.jpg"
+                  alt="Quick Response"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight3.jpg"
+                  alt="Pricing"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/space satelight4.jpg"
+                  alt="Reliable Delivery"
+                  class="slider-img"
+                />
+              </div>
+              <div class="slider-card">
+                <img
+                  src="images/vs_satelight.jpg"
+                  alt="24/7 Support"
+                  class="slider-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="gallery.html"
+            style="color: white; text-decoration: none; font-weight: 500"
+            >Explore Gallery</a
+          >
+        </div>
+      </div>
+    </section>
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">MTS</div>
-                    <p>Secure cloud storage for modern teams</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Product</h4>
-                        <a href="#">Features</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Security</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="#">About Us</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Press</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <a href="#">Documentation</a>
-                        <a href="#">API Reference</a>
-                        <a href="#">Blog</a>
-                    </div>
-                </div>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">MegaSat Technologies Pvt Ltd</div>
+            <p>
+              MegaSat Technologies Pvt Limited, is an Indian owned Start-up,
+              recognised by the Department of Promotion of Industry and Internal
+              Trade of the Government of India. It is an Indian Company
+              incorporated to promote Atmanirbhar Bharat in the Space Industry.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4></h4>
+              <a href="#"> </a>
+              <a href="#"> </a>
+              <a href="#"> </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 MTS. All rights reserved. | Designed by <a href="https://www.tooplate.com" target="_blank" rel="nofollow noopener">Tooplate</a></p>
-                <div class="social-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="team.html">Our Team</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contactus.html">Contact us</a>
+              <a href="news.html">News</a>
             </div>
+            <div class="footer-column">
+              <h4>Contact Us</h4>
+              <a href="mailto:info@megasattech.space" class="contact-item">
+                <i class="fa-solid fa-envelope"> </i> info@megasattech.space
+              </a>
+              <a
+                href="https://maps.google.com/?q=Spazedge,+Sector+48,+Gurugram,+Haryana,+India"
+                target="_blank"
+                class="contact-item"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                Unit No.5, Ground Floor,<br />
+                Spazedge, Sector 48,<br />
+                Gurugram, Haryana<br />
+                INDIA
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 MTS. All rights reserved. | Designed by
+            <a
+              href="https://www.webvedaa.com/"
+              target="_blank"
+              rel="nofollow noopener"
+              >Web Vedaa</a
+            >
+          </p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a
+              href="https://www.linkedin.com/company/megasat-technologies-private-limited"
+              >LinkedIn</a
+            >
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
-<script src="tooplate-cloud-scripts.js"></script>
-</body>
+    <script src="tooplate-cloud-scripts.js"></script>
+
+    <script>
+      const slides = [
+        {
+          title: "See Quick See Clear",
+          subtitle:
+            "with MegaSat Technologies, Delivering Quality with Speed and Precision.",
+        },
+      ];
+
+      let index = 0;
+      const titleEl = document.getElementById("hero-title");
+      const subtitleEl = document.getElementById("hero-subtitle");
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        titleEl.textContent = slides[index].title;
+        subtitleEl.textContent = slides[index].subtitle;
+      }, 3000);
+    </script>
+
+    <!--Slider-->
+    <script>
+      const track = document.getElementById("sliderTrack");
+      const cards = document.querySelectorAll(".slider-card");
+      const cardWidth = cards[0].offsetWidth;
+      let position = 0;
+
+      function stepCarousel() {
+        position += cardWidth;
+        if (position >= track.scrollWidth / 2) {
+          position = 0; // reset for seamless loop
+        }
+        track.style.transform = `translateX(-${position}px)`;
+      }
+
+      // step every 1.5 seconds
+      setInterval(stepCarousel, 1500);
+    </script>
+    <!--Toggle-->
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if(mobileMenuToggle && mobileNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+      });
+    }
+  });
+</script>
+    <!--Back to Top-->
+    <script>
+      const backToTopBtn = document.getElementById("backToTop");
+
+      // Show button when scrolling down 200px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      };
+
+      // Scroll smoothly to top when clicked
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+    <!--Bg Image-->
+    <script>
+      const backgrounds = document.querySelectorAll(".hero-bg");
+      let current = 0;
+
+      setInterval(() => {
+        backgrounds[current].classList.remove("active");
+        current = (current + 1) % backgrounds.length;
+        backgrounds[current].classList.add("active");
+      }, 4000); // change image every 4 seconds
+    </script>
+  </body>
 </html>
