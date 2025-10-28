@@ -9,6 +9,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+     <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <body>
     <!-- Animated Background -->
@@ -58,7 +73,6 @@
       </div>
       <div class="hero-content">
         <h1 id="hero-title">About us</h1>
-        
       </div>
     </section>
 
@@ -107,16 +121,10 @@
       </div>
     </section>
 
-    <section class="clients-section">
+       <section class="clients-section">
       <div class="clients-container">
-        <div class="clients-marquee" id="clientsMarquee">
-          <div class="clients-track">
-            <img src="images/logo1.png" alt="Client 1" />
-            <img src="images/logo2.png" alt="Client 2" />
-            <img src="images/logo3.png" alt="Client 3" />
-            <img src="images/logo4.png" alt="Client 4" />
-
-            <!-- duplicate for smooth looping -->
+        <div class="clients-track">
+          <div class="carousel-logo owl-carousel">
             <img src="images/logo1.png" alt="Client 1" />
             <img src="images/logo2.png" alt="Client 2" />
             <img src="images/logo3.png" alt="Client 3" />
@@ -126,10 +134,12 @@
       </div>
     </section>
 
+
     <button id="backToTop" title="Go to top">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-content">
@@ -144,14 +154,8 @@
           </div>
           <div class="footer-links">
             <div class="footer-column">
-              <h4></h4>
-              <a href="#"> </a>
-              <a href="#"> </a>
-              <a href="#"> </a>
-            </div>
-            <div class="footer-column">
-              <h4>Company</h4>
-                 <a href="index.html">Home</a>
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
               <a href="about.html">About Us</a>
               <a href="services.html">Services</a>
               <a href="team.html">Our Team</a>
@@ -159,6 +163,7 @@
               <a href="contactus.html">Contact us</a>
               <a href="news.html">News</a>
             </div>
+
             <div class="footer-column">
               <h4>Contact Us</h4>
               <a href="mailto:info@megasattech.space" class="contact-item">
@@ -170,14 +175,13 @@
                 class="contact-item"
               >
                 <i class="fa-solid fa-location-dot"></i>
-                Unit No.5, Ground Floor,<br />
-                Spazedge, Sector 48,<br />
-                Gurugram, Haryana<br />
+                Unit No.5, Ground Floor, Spazedge, Sec 48, Gurugram, Haryana,
                 INDIA
               </a>
             </div>
           </div>
         </div>
+
         <div class="footer-bottom">
           <p>
             &copy; 2025 MTS. All rights reserved. | Designed by
@@ -199,74 +203,10 @@
         </div>
       </div>
     </footer>
-    <script>
-      const track = document.querySelector(".clients-track");
-      let speed = 1; // pixels per frame
-      let pos = 0;
+    <script src="tooplate-cloud-scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      function animateMarquee() {
-        pos -= speed;
-        if (Math.abs(pos) >= track.scrollWidth / 2) {
-          pos = 0; // reset for infinite loop
-        }
-        track.style.transform = `translateX(${pos}px)`;
-        requestAnimationFrame(animateMarquee);
-      }
-
-      animateMarquee();
-
-      // Optional: pause on hover
-      document
-        .querySelector(".clients-marquee")
-        .addEventListener("mouseenter", () => (speed = 0));
-      document
-        .querySelector(".clients-marquee")
-        .addEventListener("mouseleave", () => (speed = 1));
-    </script>
-
-     <!--Back to Top-->
-    <script>
-      const backToTopBtn = document.getElementById("backToTop");
-
-      // Show button when scrolling down 200px
-      window.onscroll = function () {
-        if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-          backToTopBtn.style.display = "block";
-        } else {
-          backToTopBtn.style.display = "none";
-        }
-      };
-
-      // Scroll smoothly to top when clicked
-      backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
-    <!--Bg Image-->
-    <script>
-      const backgrounds = document.querySelectorAll(".hero-bg");
-      let current = 0;
-
-      setInterval(() => {
-        backgrounds[current].classList.remove("active");
-        current = (current + 1) % backgrounds.length;
-        backgrounds[current].classList.add("active");
-      }, 4000); // change image every 4 seconds
-    </script>
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileNav = document.getElementById('mobileNav');
-
-    if(mobileMenuToggle && mobileNav) {
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
-      });
-    }
-  });
-</script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </body>
 </html>

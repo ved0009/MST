@@ -248,35 +248,56 @@ https://www.tooplate.com/view/2142-cloud-sync
       }
 
       /* Slider Image */
-     .slider-container {
-  width: 100%;
-  overflow: hidden;
-  background: rgba(30, 41, 59, 0.9);
-  padding: 1rem 0;
-}
+       .slider-container {
+        width: 100%;
+        overflow: hidden;
+      }
 
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease; /* smooth slide */
-}
+      .slider-card {
+    
+        overflow: hidden;
+      }
 
-.slider-card {
-  flex: 0 0 auto;
-  margin-right: 2rem;
-}
+      .slider-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-.slider-img {
-  max-height: 250px;
-  display: block;
-  object-fit: contain;
-}
    
+/*Team Image*/
+     .team-img {
+  width: 120px;           /* fixed width */
+  height: 120px;          /* same height to keep it square */
+  object-fit: cover;      /* crops image evenly */
+  border-radius: 25%; 
+  background-color: #6366f1;    /* makes it perfectly round */
+  display: block;
+  margin-bottom: 15px ;         /* center it horizontally */
+}
 
+   .team-img:hover {
+  width: 120px;           /* fixed width */
+  height: 120px;          /* same height to keep it square */
+  object-fit: cover;      /* crops image evenly */
+  border-radius: 25%; 
+  background-color: #4f46e5;    /* makes it perfectly round */
+  display: block;
+    margin-bottom: 15px ;        /* center it horizontally */
+}
         /* Client */
 .clients-section {
   width: 100%;
   padding: 2rem 0;
   overflow: hidden;
+  
+}
+
+.clients-section:hover {
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+  
 }
 
 .clients-container {
@@ -291,27 +312,32 @@ https://www.tooplate.com/view/2142-cloud-sync
 
 .clients-track {
   display: flex;
-  gap: 2rem;
-  animation: marquee 20s linear infinite;
+  gap: 1rem;
+ 
 }
 
 .clients-track img {
-  max-height: 100px; /* adjust logo size */
+  max-height: 200px; /* adjust logo size */
   object-fit: contain;
+    filter: grayscale(100%); /* makes image black & white */
+  transition: filter 0.3s ease;
    
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.clients-track img:hover {
+  filter: grayscale(0%);
+}
+ .owl-stage {
+  transition-timing-function: linear !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .clients-track img {
-    max-height: 40px;
+    max-height: 80px;
   }
 }
+
 
 
         /* Hero Section */
@@ -494,7 +520,9 @@ https://www.tooplate.com/view/2142-cloud-sync
             border-radius: 1rem;
             transition: all 0.3s ease;
         }
+        
 
+            
         .feature-card-large:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
@@ -1175,7 +1203,7 @@ https://www.tooplate.com/view/2142-cloud-sync
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 3fr;
-            gap: 4rem;
+            gap: 6rem;
             margin-bottom: 2rem;
         }
 
@@ -1186,8 +1214,8 @@ https://www.tooplate.com/view/2142-cloud-sync
 
         .footer-links {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(2, 0.5fr);
+            gap: 1rem;
         }
 
         .footer-column h4 {
