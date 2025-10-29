@@ -1,147 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudSync - Seamless Cloud Storage for Teams</title>
-    <link href="tooplate-cloud-sync-style.css" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTS - Seamless Cloud Storage for Teams</title>
+    <link href="tooplate-cloud-sync-style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+      <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
 
-</head>
-<body>
-  <!-- Animated Background -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .stat-card {
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 12px;
+        padding: 25px 15px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+      }
+
+      .stat-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-secondary, #ccc);
+      }
+
+      @media (max-width: 600px) {
+        .stat-icon {
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background -->
     <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
     </div>
 
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <div class="logo">CloudSync</div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#pricing">Pricing</a>
-                <a href="/about.html">About</a>
-                <a href="#contact">Contact</a>
-                 
-            </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="nav-container">
+        <div class="logo">MST</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="team.html">Our Team</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="news.html">News</a>
+          <a href="contactus.html" class="cta-button">Get Started</a>
         </div>
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#" class="cta-button">Start Free Trial</a>
-        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactus.html">Contact</a>
+        <a href="news.html">News</a>
+      </div>
     </nav>
 
-      <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="features-container">
-            <div class="features-header">
-                <h2>Everything You Need to Succeed</h2>
-                <p class="features-subtitle">Powerful features designed to streamline your workflow and boost productivity</p>
-            </div>
-            
-            <div class="features-layout">
-                <!-- Two Column Features -->
-                <div class="features-two-col">
-                    <div class="feature-card-large">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Enterprise-Grade Security</h3>
-                        <p>Your data is protected with bank-level encryption, both in transit and at rest. We're compliant with SOC 2, GDPR, and HIPAA standards.</p>
-                        <ul class="feature-checklist">
-                            <li>256-bit AES encryption</li>
-                            <li>Two-factor authentication</li>
-                            <li>Regular security audits</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card-large">
-                        <div class="feature-icon">🤝</div>
-                        <h3>Real-time Collaboration</h3>
-                        <p>Work together seamlessly with your team. See changes as they happen with live editing, comments, and instant notifications.</p>
-                        <ul class="feature-checklist">
-                            <li>Live document editing</li>
-                            <li>Version control & rollback</li>
-                            <li>Team activity tracking</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Four Column Features -->
-                <div class="features-four-col">
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🚀</div>
-                        <h4>Lightning Fast</h4>
-                        <p>Upload and access files instantly with our global CDN network.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">📊</div>
-                        <h4>Advanced Analytics</h4>
-                        <p>Track usage patterns and optimize your workflow with detailed insights.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🔄</div>
-                        <h4>Smart Sync</h4>
-                        <p>Automatic syncing across all devices with conflict resolution.</p>
-                    </div>
-                    <div class="feature-card-small">
-                        <div class="feature-icon-small">🌐</div>
-                        <h4>API Integration</h4>
-                        <p>Connect with 1000+ apps through our powerful REST API.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-backgrounds">
+        <div class="hero-bg active"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+      </div>
+      <div class="hero-content">
+        <h1 id="hero-title">Services</h1>
+      </div>
     </section>
 
-    
-<!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">CloudSync</div>
-                    <p>Secure cloud storage for modern teams</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Product</h4>
-                        <a href="#">Features</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Security</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="#">About Us</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Press</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <a href="#">Documentation</a>
-                        <a href="#">API Reference</a>
-                        <a href="#">Blog</a>
-                    </div>
-                </div>
+    <section class="pricing" id="pricing">
+      <div class="features-container">
+        <div class="features-header"><h2>Services we’re Offering</h2></div>
+
+        <div class="features-layout">
+          <!-- Two Column Features -->
+          <div class="features-two-col">
+            <div class="feature-card-large">
+              <div class="feature-icon">🛰️</div>
+              <h3>High Resolution Imagery</h3>
+              <p>
+                Best quality high-resolution imagery provided tailor-made to the
+                needs of Defence and Intelligence agencies, sourced through
+                credible and trusted partners.
+              </p>
+              <ul class="feature-checklist">
+                <li>60 cm resolution imagery</li>
+                <li>Tailor-made for Defence & Intelligence</li>
+                <li>Trusted partner sourcing</li>
+              </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 CloudSync. All rights reserved. | Designed by <a href="https://www.tooplate.com" target="_blank" rel="nofollow noopener">Tooplate</a></p>
-                <div class="social-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                </div>
+
+            <div class="feature-card-large">
+              <div class="feature-icon">📡</div>
+              <h3>RF Locating Services</h3>
+              <p>
+                Access to RF locating services for Tip and Cue to locate the
+                area of interest quickly and save precious imaging efforts.
+                Process initiated to design and develop efficient RF satellite
+                constellations using high-end technology, providing greater
+                value for the money spent.
+              </p>
+              <ul class="feature-checklist">
+                <li>Tip and Cue based RF locating</li>
+                <li>Efficient satellite constellation design</li>
+                <li>High-end technology integration</li>
+              </ul>
             </div>
+
+            <div class="feature-card-large">
+              <div class="feature-icon">💡</div>
+              <h3>Analytical Solutions</h3>
+              <p>
+                A smart analytical system capable of integrating inputs from
+                different sensors and generating actionable intelligence, with
+                change detection, to aid in quick and reliable decision making.
+              </p>
+              <ul class="feature-checklist">
+                <li>Multi-sensor data integration</li>
+                <li>Automated change detection</li>
+                <li>Actionable intelligence generation</li>
+              </ul>
+            </div>
+
+            <div class="feature-card-large">
+              <div class="feature-icon">🛰</div>
+              <h3>GeoSpatial Intelligence</h3>
+              <p>
+                Best-in-class geospatial analysis tools designed to process
+                satellite data, extract insights, and deliver real-time
+                situational awareness for mission-critical operations.
+              </p>
+              <ul class="feature-checklist">
+                <li>AI-driven object and pattern recognition</li>
+                <li>Real-time change and activity detection</li>
+                <li>Mission-specific intelligence dashboards</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>High Quality at Fast Speed</h2>
+
+          <div class="about-text">
+            <p>
+              Single Window Shopping of Hi resolution data generated from
+              multiple sources, Quick response, Reliable Delivery retaining
+              Confidentiality desired by the customer, Competitive Pricing,
+              Multiple Revisits in a day, Change Detection, Actionable
+              Intelligence delivered at door step
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <i class="fas fa-tv stat-icon"></i>
+              <div class="stat-label">High Resolution</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-bolt stat-icon"></i>
+              <div class="stat-label">Quick Response</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-tags stat-icon"></i>
+              <div class="stat-label">Competitive Pricing</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-cloud-arrow-up stat-icon"></i>
+              <div class="stat-label">Reliable Delivery</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-headset stat-icon"></i>
+              <div class="stat-label">24/7 Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="clients-section">
+      <div class="clients-container">
+        <div class="clients-track">
+          <div class="carousel-logo owl-carousel">
+            <img src="images/logo1.png" alt="Client 1" />
+            <img src="images/logo2.png" alt="Client 2" />
+            <img src="images/logo3.png" alt="Client 3" />
+            <img src="images/logo4.png" alt="Client 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">MegaSat Technologies Pvt Ltd</div>
+            <p>
+              MegaSat Technologies Pvt Limited, is an Indian owned Start-up,
+              recognised by the Department of Promotion of Industry and Internal
+              Trade of the Government of India. It is an Indian Company
+              incorporated to promote Atmanirbhar Bharat in the Space Industry.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="team.html">Our Team</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contactus.html">Contact us</a>
+              <a href="news.html">News</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Contact Us</h4>
+              <a href="mailto:info@megasattech.space" class="contact-item">
+                <i class="fa-solid fa-envelope"> </i> info@megasattech.space
+              </a>
+              <a
+                href="https://maps.google.com/?q=Spazedge,+Sector+48,+Gurugram,+Haryana,+India"
+                target="_blank"
+                class="contact-item"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                Unit No.5, Ground Floor, Spazedge, Sec 48, Gurugram, Haryana,
+                INDIA
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 MTS. All rights reserved. | Designed by
+            <a
+              href="https://www.webvedaa.com/"
+              target="_blank"
+              rel="nofollow noopener"
+              >Web Vedaa</a
+            >
+          </p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a
+              href="https://www.linkedin.com/company/megasat-technologies-private-limited"
+              >LinkedIn</a
+            >
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="tooplate-cloud-scripts.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
 </html>

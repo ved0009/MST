@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTS - Seamless Cloud Storage for Teams</title>
+    <link href="tooplate-cloud-sync-style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+      <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+      .pricing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .pricing-card {
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .video-thumb {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-bottom: 1px solid #eee;
+      }
+
+      .video-thumb img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .video-thumb:hover img {
+        transform: scale(1.05);
+      }
+
+      .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 2rem;
+        padding: 10px 20px;
+        border-radius: 50%;
+        opacity: 0.9;
+      }
+
+      .pricing-card h3 {
+        font-size: 1rem;
+        padding: 1rem;
+        color: #94a3b8;
+      }
+
+      .news-list {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .news-list li {
+        margin-bottom: 0.8rem;
+        color: #94a3b8;
+      }
+
+      .news-list a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .news-list a:hover {
+        text-decoration: underline;
+        color: #6366f1;
+      }
+      @media (max-width: 768px) {
+        .news-list {
+          padding-left: 1rem;
+        }
+
+        .news-list li {
+          margin-bottom: 1.2rem;
+        }
+
+        .news-list a {
+          font-size: 0.95rem;
+          line-height: 1.5;
+          padding: 0.3rem 0;
+          display: block;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .news-list a {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">MST</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="team.html">Our Team</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="news.html">News</a>
+          <a href="contactus.html" class="cta-button">Get Started</a>
+        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactus.html">Contact</a>
+        <a href="news.html">News</a>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-backgrounds">
+        <div class="hero-bg active"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+      </div>
+      <div class="hero-content">
+        <h1 id="hero-title">Gallery</h1>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>404 No Data Found</h2>
+        </div>
+      </div>
+    </section>
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">MegaSat Technologies Pvt Ltd</div>
+            <p>
+              MegaSat Technologies Pvt Limited, is an Indian owned Start-up,
+              recognised by the Department of Promotion of Industry and Internal
+              Trade of the Government of India. It is an Indian Company
+              incorporated to promote Atmanirbhar Bharat in the Space Industry.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="team.html">Our Team</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contactus.html">Contact us</a>
+              <a href="news.html">News</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Contact Us</h4>
+              <a href="mailto:info@megasattech.space" class="contact-item">
+                <i class="fa-solid fa-envelope"> </i> info@megasattech.space
+              </a>
+              <a
+                href="https://maps.google.com/?q=Spazedge,+Sector+48,+Gurugram,+Haryana,+India"
+                target="_blank"
+                class="contact-item"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                Unit No.5, Ground Floor, Spazedge, Sec 48, Gurugram, Haryana,
+                INDIA
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 MTS. All rights reserved. | Designed by
+            <a
+              href="https://www.webvedaa.com/"
+              target="_blank"
+              rel="nofollow noopener"
+              >Web Vedaa</a
+            >
+          </p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a
+              href="https://www.linkedin.com/company/megasat-technologies-private-limited"
+              >LinkedIn</a
+            >
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+ <script src="tooplate-cloud-scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

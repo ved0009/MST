@@ -1,13 +1,104 @@
-/*
-
-Tooplate 2142 Cloud Sync
-
-https://www.tooplate.com/view/2142-cloud-sync
-
-*/
-
+ 
 
 // JavaScript Document
+
+
+//Owl
+ $(document).ready(function () {
+        $(".carousel-logo").owlCarousel({
+          loop: true,
+          margin: 1,
+          rtl: false, // Right → Left direction
+          autoplay: true,
+          autoplayTimeout: 3000, // Time between slides
+          smartSpeed: 1000, // Speed of the jerk (lower = faster jerk)
+           slideTransition: "linear", // removes jerk effect
+          dots: false,
+          nav: false, // show next/prev arrows
+          mouseDrag: true,
+          touchDrag: true,
+          pullDrag: true,
+           responsive: {
+      0: { items: 4 },
+      576: { items: 4 },
+      768: { items: 5 },
+      992: { items: 5 },
+      1200: { items: 5 }, // ✅ shows 5 items on large screens
+    },
+        
+        });
+      });
+
+ $(document).ready(function () {
+        $(".carousel-cause").owlCarousel({
+          loop: true,
+          margin: 20,
+          rtl: false, // Right → Left direction
+          autoplay: true,
+          autoplayTimeout: 2000, // Time between slides
+          smartSpeed: 700, // Speed of the jerk (lower = faster jerk)
+          dots: false,
+          nav: false, // show next/prev arrows
+          mouseDrag: true,
+          touchDrag: true,
+          pullDrag: true,
+          responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 3 },
+          },
+        });
+      });
+
+//Mobile Nav Bar
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if(mobileMenuToggle && mobileNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+      });
+    }
+  });
+
+ 
+ 
+
+ //Bg Image
+   
+      const backgrounds = document.querySelectorAll(".hero-bg");
+      let current = 0;
+
+      setInterval(() => {
+        backgrounds[current].classList.remove("active");
+        current = (current + 1) % backgrounds.length;
+        backgrounds[current].classList.add("active");
+      }, 3000); 
+    
+
+
+ //Back to Top
+    
+      const backToTopBtn = document.getElementById("backToTop");
+
+      // Show button when scrolling down 200px
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      };
+
+      // Scroll smoothly to top when clicked
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+   
 
         // Interactive Pricing Calculator
         const teamSlider = document.getElementById('teamSlider');

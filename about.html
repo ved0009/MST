@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTS - Seamless Cloud Storage for Teams</title>
     <link href="tooplate-cloud-sync-style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+     <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <body>
     <!-- Animated Background -->
@@ -17,12 +36,16 @@
     <!-- Navigation -->
     <nav>
       <div class="nav-container">
-        <div class="logo">MTS</div>
+        <div class="logo">MST</div>
         <div class="nav-links">
           <a href="index.html">Home</a>
-          <a href="#pricing">Pricing</a>
-          <a href="/about.html">About</a>
-          <a href="#contact">Contact</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="team.html">Our Team</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="news.html">News</a>
+          <a href="contactus.html" class="cta-button">Get Started</a>
         </div>
         <button class="mobile-menu-toggle" id="mobileMenuToggle">
           <span></span>
@@ -31,128 +54,159 @@
         </button>
       </div>
       <div class="mobile-nav" id="mobileNav">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#" class="cta-button">Start Free Trial</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contactus.html">Contact</a>
+        <a href="news.html">News</a>
       </div>
     </nav>
-    <section class="about" id="about">
-  <div class="about-container">
-    <div class="about-content">
-      <h2>Trusted by 10,000+ Organizations Worldwide</h2>
-      <p class="about-subtitle">
-        Since 2020, we've been helping businesses, governments, and researchers 
-        access the most reliable and high-resolution satellite imagery available.
-      </p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-backgrounds">
+        <div class="hero-bg active"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
+      </div>
+      <div class="hero-content">
+        <h1 id="hero-title">About us</h1>
+      </div>
+    </section>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">30cm</div>
-          <div class="stat-label">Ultra-High Image Resolution</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">150+</div>
-          <div class="stat-label">Countries Covered</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">2M+</div>
-          <div class="stat-label">Images Processed Daily</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">Data Access & Support</div>
+    <section class="pricing" id="pricing">
+      <div class="features-container">
+        <!-- About Section -->
+        <section class="aboutus-section">
+          <div class="aboutus-container">
+            <div class="aboutus-left">
+              <img
+                src="images/space satelight1.jpg"
+                alt="MegaSat Technologies"
+              />
+            </div>
+            <div class="aboutus-right">
+              <h2>MegaSat Technologies Pvt. Limited</h2>
+              <p>
+                MegaSat Technologies Pvt. Limited, an Indian-owned startup, is a
+                prominent contributor to India’s space industry, driven by a
+                commitment to self-reliance and innovation. Recognized by the
+                Department of Promotion of Industry and Internal Trade, it
+                aligns with India’s agenda of Atmanirbhar Bharat (self-reliant
+                India).
+              </p>
+              <p>
+                At the core of MegaSat’s mission is the development of a robust
+                ecosystem in India to foster indigenous capabilities in
+                geospatial and space-based intelligence, tailored to the
+                specific needs of India’s defense sector. Leveraging
+                state-of-the-art satellite technology, MegaSat aims to transform
+                the landscape of space-based solutions within the country.
+              </p>
+              <p>
+                The solutions offered by MegaSat Technologies comprise satellite
+                imagery services, data aggregator services, integrated ground
+                command stations, and advanced AI-based Geospatial intelligence
+                analytical systems. Committed to offering comprehensive
+                satellite solutions, MegaSat empowers defense agencies with
+                enhanced situational awareness and strategic decision-making
+                capabilities, contributing significantly to India’s strategic
+                autonomy and technological advancement.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+       <section class="clients-section">
+      <div class="clients-container">
+        <div class="clients-track">
+          <div class="carousel-logo owl-carousel">
+            <img src="images/logo1.png" alt="Client 1" />
+            <img src="images/logo2.png" alt="Client 2" />
+            <img src="images/logo3.png" alt="Client 3" />
+            <img src="images/logo4.png" alt="Client 4" />
+          </div>
         </div>
       </div>
+    </section>
 
-       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">30cm</div>
-          <div class="stat-label">Ultra-High Image Resolution</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">150+</div>
-          <div class="stat-label">Countries Covered</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">2M+</div>
-          <div class="stat-label">Images Processed Daily</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">Data Access & Support</div>
-        </div>
-      </div>
 
-      <div class="about-text">
-        <p>
-          SkyView Imagery was founded with one clear goal: to make satellite data 
-          more accessible, accurate, and actionable. While others focused on raw 
-          imagery, we focused on clarity — delivering high-resolution data that 
-          powers everything from urban planning to environmental research.
-        </p>
-        <p>
-          Our experts in geospatial intelligence, remote sensing, and data 
-          analytics ensure every pixel meets industry standards. With secure 
-          cloud access, API integration, and global coverage, SkyView empowers 
-          organizations to make smarter, faster decisions using real-world visuals. 
-          Our HTML template is free to use and inspired by 
-          <a href="#">Tooplate</a>. Satellite images are sourced from 
-          <a href="#">Unsplash</a> and open imagery platforms.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-content">
           <div class="footer-brand">
-            <div class="logo">MTS</div>
-            <p>Secure cloud storage for modern teams</p>
+            <div class="logo">MegaSat Technologies Pvt Ltd</div>
+            <p>
+              MegaSat Technologies Pvt Limited, is an Indian owned Start-up,
+              recognised by the Department of Promotion of Industry and Internal
+              Trade of the Government of India. It is an Indian Company
+              incorporated to promote Atmanirbhar Bharat in the Space Industry.
+            </p>
           </div>
           <div class="footer-links">
             <div class="footer-column">
-              <h4>Product</h4>
-              <a href="#">Features</a>
-              <a href="#">Pricing</a>
-              <a href="#">Security</a>
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="team.html">Our Team</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contactus.html">Contact us</a>
+              <a href="news.html">News</a>
             </div>
+
             <div class="footer-column">
-              <h4>Company</h4>
-              <a href="#">About Us</a>
-              <a href="#">Careers</a>
-              <a href="#">Press</a>
-            </div>
-            <div class="footer-column">
-              <h4>Resources</h4>
-              <a href="#">Documentation</a>
-              <a href="#">API Reference</a>
-              <a href="#">Blog</a>
+              <h4>Contact Us</h4>
+              <a href="mailto:info@megasattech.space" class="contact-item">
+                <i class="fa-solid fa-envelope"> </i> info@megasattech.space
+              </a>
+              <a
+                href="https://maps.google.com/?q=Spazedge,+Sector+48,+Gurugram,+Haryana,+India"
+                target="_blank"
+                class="contact-item"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                Unit No.5, Ground Floor, Spazedge, Sec 48, Gurugram, Haryana,
+                INDIA
+              </a>
             </div>
           </div>
         </div>
+
         <div class="footer-bottom">
           <p>
             &copy; 2025 MTS. All rights reserved. | Designed by
             <a
-              href="https://www.tooplate.com"
+              href="https://www.webvedaa.com/"
               target="_blank"
               rel="nofollow noopener"
-              >Tooplate</a
+              >Web Vedaa</a
             >
           </p>
           <div class="social-links">
             <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/company/megasat-technologies-private-limited"
+              >LinkedIn</a
+            >
             <a href="#">GitHub</a>
           </div>
         </div>
       </div>
     </footer>
     <script src="tooplate-cloud-scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </body>
 </html>
